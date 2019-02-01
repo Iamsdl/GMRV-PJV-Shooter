@@ -63,8 +63,10 @@
     <Compile Include="Assets\AsteroidGenerator.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Enemy.cs" />
+    <Compile Include="Assets\EnemyBullet.cs" />
     <Compile Include="Assets\EnemyHolder.cs" />
     <Compile Include="Assets\EnemySpawner.cs" />
+    <Compile Include="Assets\explosion.cs" />
     <Compile Include="Assets\FuelPickup.cs" />
     <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\InteractionObject.cs" />

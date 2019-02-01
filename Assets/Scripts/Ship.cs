@@ -36,7 +36,6 @@ public class Ship : MonoBehaviour
         this.fuel += amount;
     }
 
-    public static float terminalVelocity;
     private float shipRotationSpeed;
     private float shipRotationAngle;
     private float thrusterForce;
@@ -57,15 +56,17 @@ public class Ship : MonoBehaviour
     public float maxFuel;
     public List<string> inventory;
 
+    public GameObject W;
+    public GameObject A;
+    public GameObject S;
+    public GameObject D;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-
         inventory = new List<string>();
         fuel = maxFuel;
         score = 0;
-        terminalVelocity = 25.0f;
         attackSpeed = 1.0f;
         shipRotationSpeed = 150.0f;
         thrusterForce = 10.0f;
@@ -108,41 +109,49 @@ public class Ship : MonoBehaviour
         #region WASD
         if (Input.GetKeyDown(KeyCode.W))
         {
+            W.SetActive(true);
             upAxis++;
         }
 
         if (Input.GetKeyUp(KeyCode.W))
         {
+            W.SetActive(false);
             upAxis--;
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
+            S.SetActive(true);
             upAxis -= 0.8f;
         }
 
         if (Input.GetKeyUp(KeyCode.S))
         {
+            S.SetActive(false);
             upAxis += 0.8f;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
+            D.SetActive(true);
             rightAxis += 0.5f;
         }
 
         if (Input.GetKeyUp(KeyCode.D))
         {
+            D.SetActive(false);
             rightAxis -= 0.5f;
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
+            A.SetActive(true);
             rightAxis -= 0.5f;
         }
 
         if (Input.GetKeyUp(KeyCode.A))
         {
+            A.SetActive(false);
             rightAxis += 0.5f;
         }
         #endregion
@@ -186,7 +195,7 @@ public class Ship : MonoBehaviour
             rb.AddForce(thrusterForce * (this.transform.up * upAxis + this.transform.right * rightAxis));
         }
 
-        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -terminalVelocity, terminalVelocity), Mathf.Clamp(rb.velocity.y, -terminalVelocity, terminalVelocity));
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -GameController.TerminalVelocity, GameController.TerminalVelocity), Mathf.Clamp(rb.velocity.y, -GameController.TerminalVelocity, GameController.TerminalVelocity));
 
         float playerHeightRelativeToMinimap = this.transform.position.y - minimapCamera.transform.position.y;
         if (playerHeightRelativeToMinimap >= 15)
@@ -202,7 +211,7 @@ public class Ship : MonoBehaviour
             float mx, my;
             mx = Mathf.Abs(transform.up.x);
             my = Mathf.Abs(transform.up.y);
-            this.rb.velocity = transform.up * terminalVelocity / Mathf.Max(mx, my);
+            this.rb.velocity = transform.up * GameController.TerminalVelocity / Mathf.Max(mx, my);
         }
 
         if (BoostCooldown > 0)

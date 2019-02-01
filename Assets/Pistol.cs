@@ -5,26 +5,26 @@ using UnityEngine;
 public class Pistol : Weapon
 {
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
     {
-        
+
     }
 
     public override void Shoot()
     {
-
-        var tempBullet = Instantiate(bullet,transform);
+        base.Shoot();
+        var tempBullet = Instantiate(bullet, transform);
         tempBullet.transform.parent = null;
 
         tempBullet.gameObject.SetActive(true);

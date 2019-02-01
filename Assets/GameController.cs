@@ -11,9 +11,12 @@ public class GameController : MonoBehaviour
     public List<GameObject> gameObjects;
     public GameObject mainMenu;
 
+    public static float TerminalVelocity { get; internal set; }
+
     // Start is called before the first frame update
     void Start()
     {
+        TerminalVelocity = 20.0f;
         difficulty = 1.0f;
     }
 

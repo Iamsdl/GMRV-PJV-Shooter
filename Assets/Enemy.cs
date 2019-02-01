@@ -26,6 +26,8 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -GameController.TerminalVelocity, GameController.TerminalVelocity), Mathf.Clamp(rb.velocity.y, -GameController.TerminalVelocity, GameController.TerminalVelocity));
+
         #region Shooting
         if (attackSpeed > 0)
         {

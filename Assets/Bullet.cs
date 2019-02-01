@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     public float damage;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
@@ -23,7 +23,8 @@ public class Bullet : MonoBehaviour
         bulletLifespan = 5.0f;
         StartCoroutine(DeleteBullet());
         this.bulletAcceleration = transform.up * bulletAccelerationMultiplier;
-        rb.velocity = Vector2.Dot(owner.GetComponent<Rigidbody2D>().velocity,transform.up)*(Vector2)transform.up;
+        rb.velocity = Vector2.Dot(owner.GetComponent<Rigidbody2D>().velocity,transform.right)*(Vector2)transform.right+GameController.TerminalVelocity*(Vector2)transform.up;
+
     }
 
     // Update is called once per frame
