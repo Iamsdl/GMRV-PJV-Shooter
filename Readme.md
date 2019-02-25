@@ -13,7 +13,7 @@
   - [x] Player Health
   - [x] Abilitati/Cooldown
   - [x] Minimap
-  - [ ] Inventar/Echipament
+  - [x] Inventar/Echipament
   - [x] afisare punctaj
     
 - Player
