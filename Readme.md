@@ -1,4 +1,4 @@
-# # Joc in unity ce trebuie sa contina:
+## Joc in unity ce trebuie sa contina:
 
 Meniu
     // selectie de nivel de dificultate/joc
@@ -8,7 +8,7 @@ Meniu
 Harta
     // se deruleaza la nesfarsit
     // se genereaza obstacole si/sau diferente de nivel
-
+    
 GUI
     // Player Health
     // Abilitati/Cooldown
@@ -31,7 +31,7 @@ Player
     poate strange de pe harta echipament
     isi poate echipa/modifica/actualiza echipamentul
     are efecte vizuale si sonore atunci cand merge, ataca sau foloseste o abilitate
-
+    
 Inamici
     Jucator online in multiplayer
     Serverul trebuie sa accepte cel putin 5 jucatori simultan
