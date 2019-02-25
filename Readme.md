@@ -1,13 +1,13 @@
 ## Joc in unity ce trebuie sa contina:
 
 -Meniu
- [x] selectie de nivel de dificultate/joc
- [x] start game
- [x] exit game
+ - [x] selectie de nivel de dificultate/joc
+ - [x] start game
+ - [x] exit game
 
 -Harta
- [x] se deruleaza la nesfarsit
- [x] se genereaza obstacole si/sau diferente de nivel
+ - [x] se deruleaza la nesfarsit
+ - [x] se genereaza obstacole si/sau diferente de nivel
     
 GUI
 // Player Health
