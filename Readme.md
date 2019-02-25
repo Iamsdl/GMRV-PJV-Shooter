@@ -1,9 +1,9 @@
 ## Joc in unity ce trebuie sa contina:
 
 Meniu
-// selectie de nivel de dificultate/joc
-// start game
-// exit game
+- selectie de nivel de dificultate/joc
+- start game
+- exit game
 
 Harta
 // se deruleaza la nesfarsit
