@@ -9,12 +9,12 @@
   - [x] se deruleaza la nesfarsit
   - [x] se genereaza obstacole si/sau diferente de nivel
     
-GUI
-// Player Health
-// Abilitati/Cooldown
-// Minimap
-Inventar/Echipament
-// afisare punctaj
+- GUI
+  - [x] Player Health
+  - [x] Abilitati/Cooldown
+  - [x] Minimap
+  - [] Inventar/Echipament
+  - [x] afisare punctaj
     
 Player
 // controlat de la tastatura si mouse
